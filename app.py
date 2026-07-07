@@ -1,0 +1,1 @@
+print ("Hello DevOps 2026 from Mac M4!")
