@@ -1,0 +1,15 @@
+name: DevOps CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 📥 ดึงโค้ดล่าสุดมาใช้งาน
+      uses: actions/checkout@v4
+
+    - name: 🐳 สั่งหุ่นยนต์ประกอบตู้คอนเทนเนอร์ Docker
+      run: docker build -t my-first-devops-app .
